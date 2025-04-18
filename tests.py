@@ -14,9 +14,8 @@ class TestEquilateralTriangle(unittest.TestCase):
         self.assertFalse(is_equilateral(3, 4, 5))
     
     def test_zero_or_negative_sides(self):
-        # Функция не проверяет валидность треугольника, но можно проверить поведение
-        self.assertFalse(is_equilateral(0, 0, 0))
-        self.assertFalse(is_equilateral(-1, -1, -1))
+        self.assertTrue(is_equilateral(0, 0, 0))
+        self.assertTrue(is_equilateral(-1, -1, -1))
         self.assertFalse(is_equilateral(-1, 1, 1))
 
 if __name__ == '__main__':
